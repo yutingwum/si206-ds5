@@ -3,7 +3,7 @@ import unittest
 
 # TODO: read dataset.txt under data folder
 # hint: what is a file path?
-f = open("", "r")
+f = open("/Users/phillng0073/si206-ds5/data/dataset.txt", "r")
 
 data = f.read()
 
@@ -12,7 +12,9 @@ data = f.read()
 # The outcome should be similar to this:
 # ["http://abc.com", "http://edf.com"]
 regex = r""
-all_url = re.findall(regex, data, re.MULTILINE)
+all_url = re.findall(("^http://" | "^https://"), data, re.MULTILINE)
+# r'(\w+\w//\/w*[]\w+[]\w+)'
+
 
 # TODO:
 # store all urls where country is either United States or Japan in a list of
